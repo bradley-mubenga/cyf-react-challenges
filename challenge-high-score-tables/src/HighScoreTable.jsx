@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import PlayerScore from './PlayerScore';
+
 //Score Board Functional Component With The Scores Data Passed As A Prop.
 export default function ScoreBoard({ scoresData }) {
     //The current state of the data, is there data present in the props or not?
@@ -20,11 +22,7 @@ export default function ScoreBoard({ scoresData }) {
     let ScoreBoardHTML = scoresData.map((scoreData, index) => 
         <div className="scoreBox" key={index}>
             <h3>{ scoreData.name }</h3>
-            { scoreData.scores.map((score, index) =>
-                <ul className="individualScores" key={index}>
-                    <li>{score.n} : {score.s}</li>
-                </ul>
-            ) }
+            <PlayerScore playerScores={scoreData.scores}/>
         </div>
     )
     

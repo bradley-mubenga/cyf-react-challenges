@@ -1,5 +1,5 @@
  import './App.css';
- import ScoreBoard from './ScoreBoard';
+ import HighScoreTable from './HighScoreTable';
 
  import allCountryScores from './scores';
 
@@ -9,7 +9,7 @@ function App() {
       <div className="outerBox">
         <h1>High Scores Per Country</h1>
 
-        <ScoreBoard scoresData={allCountryScores}/>
+        <HighScoreTable scoresData={allCountryScores}/>
       </div>
     </div>
   );

@@ -6,8 +6,8 @@
 function App() {
   return (
     <div className="App">
-      <div className="">
-        <h3>Scores Per Country</h3>
+      <div className="outerBox">
+        <h1>High Scores Per Country</h1>
 
         <ScoreBoard scoresData={allCountryScores}/>
       </div>
